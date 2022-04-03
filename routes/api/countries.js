@@ -53,13 +53,6 @@ router.put("/:id", (req, res) => {
     (country) => country.id === parseInt(req.params.id)
   );
   if (found) {
-    // countries.forEach((country, i) => {
-    //   if (idFilter(req)(country)) {
-    //     const updateCountry = { ...country, ...req.body };
-    //     country[i] = updateCountry;
-    //     res.json({ message: "Country updated", updateCountry });
-    //   }
-    // });
     const updateCountry = req.body;
     countries.forEach((country) => {
       if (country.id === parseInt(req.params.id)) {

@@ -13,12 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Homepage Route
-app.get("/", (req, res) =>
-  res.render("index", {
-    title: "Country App",
-    countries,
-  })
-);
+app.get("/", (req, res) => res.send(req.body));
 //Countries API Router
 app.use("/api/countries", require("./routes/api/countries"));
 
