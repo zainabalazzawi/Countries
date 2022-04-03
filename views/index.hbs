@@ -1,0 +1,23 @@
+<h1>{{title}}</h1>
+{{! <form action="/api/countries" method="POST">
+  <div>
+    <label for="country">Country</label>
+    <input type="text" name="country" />
+  </div>
+  <div>
+    <label for="language">Language</label>
+    <input type="text" name="language" />
+  </div>
+  <div>
+    <label for="language">Population</label>
+    <input type="text" name="population" />
+  </div>
+
+  <input type="submit" value="Add Country" />
+</form> }}
+<h4>Countries</h4>
+<ul>
+  {{#each members}}
+    <li>{{this.country}}: {{this.language}} {{this.population}}</li>
+  {{/each}}
+</ul>
